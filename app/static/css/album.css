@@ -72,3 +72,15 @@ footer p {
   width: 100%;
   display: block;
 }
+
+.main-form {
+  margin: auto;
+}
+
+.flask-flash {
+  width: 70%;
+  margin: auto;
+  background-color: #fff7e6;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
