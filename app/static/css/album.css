@@ -1,0 +1,74 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.navbar-btn {
+  color: #fff;
+  margin-right: 2em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.category-on {
+  display: inline;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.category-off {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+.like-btn {
+  background-color: #ecf8f2;
+}
+
+.dislike-btn {
+  background-color: #ffe6e6;
+}
+
+.card-img-top {
+  height: 225px;
+  width: 100%;
+  display: block;
+}

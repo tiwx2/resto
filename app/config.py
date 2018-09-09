@@ -3,3 +3,4 @@ class Config(object):
 
 class DevelopmentConfig(Config):
 	DEBUG = True
+	SECRET_KEY = "S8iXFQKkOK7MgvUL2VxvN6yuOyAOTtVv"
