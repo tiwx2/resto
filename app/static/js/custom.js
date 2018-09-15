@@ -1,6 +1,6 @@
 card_template_text = `\n \
       <div class="card mb-4 shadow-sm"> \
-        <img class="card-img-top" alt="Thumbnail [100%x225]" src="" data-holder-rendered="true"> \
+        <img class="card-img-top" alt="Thumbnail [100%x225]" src="_picture" data-holder-rendered="true"> \
         <div class="card-body"> \
         <p class="card-title">_title</p>\
           <p class="card-text">_description</p> \
@@ -19,7 +19,8 @@ function render_card(d, type){
 	var mapObj = {
 		_title: d.name,
 		_description: d.description,
-		_distance: d.distance
+		_distance: d.distance,
+		_picture: d.picture
 	}
 
 	if (type === 'like'){
@@ -28,7 +29,7 @@ function render_card(d, type){
 		mapObj._button = dislike_button;
 	}
 
-	card_template = $('<div class="col-md-4" \>').html(card_template_text.replace(/\_(title|description|distance|button)/gi, function(matched){
+	card_template = $('<div class="col-md-4" \>').html(card_template_text.replace(/\_(title|description|distance|button|picture)/gi, function(matched){
 		return mapObj[matched]
 	}));
 	return card_template.clone();

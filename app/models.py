@@ -54,6 +54,7 @@ if 'restaurants' in db.Model.metadata.tables:
 				'description':	self.description,
 				'longitude': self.longitude,
 				'latitude': self.latitude,
+				'picture': url_for('static', filename="pics/" + self.picture),
 				'links': {
 					'like': url_for('api.like_a_restaurants', id = self.id),
 					'dislike': url_for('api.dislike_a_restaurants', id = self.id)
