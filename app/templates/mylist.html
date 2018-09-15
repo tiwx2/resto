@@ -13,8 +13,8 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="category">
-      	<div class="category-on">Nearby Restaurants</div>
-      	<div class="category-off"><a href="{{url_for('mylist')}}">My prefered Restaurants</a></div>
+      	<div class="category-on">My prefered Restaurants</div>
+      	<div class="category-off"><a href="{{ url_for('index') }}">Nearby Restaurants</a></div>
       </div>
       <div class="row" id="restaurants">
  
@@ -30,7 +30,7 @@
 <script  type=text/javascript>
   $(document).ready(function() {
     window.update_page = function(){
-        get_notliked_restaurants("{{ user_id }}");
+        get_liked_restaurants("{{ user_id }}");
         $('#restaurants').html("");
       }
 

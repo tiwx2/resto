@@ -84,3 +84,7 @@ footer p {
   margin-bottom: 1em;
   margin-top: 1em;
 }
+
+.card-title {
+  font-weight: bold; 
+}

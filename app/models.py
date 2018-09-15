@@ -1,5 +1,6 @@
 from app import db, login
 from flask_login import UserMixin
+from flask import url_for
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -48,10 +49,15 @@ if 'restaurants' in db.Model.metadata.tables:
 
 		def to_dict(self):
 			return {
+				'id': self.id,
 				'name':	self.name,
 				'description':	self.description,
 				'longitude': self.longitude,
-				'latitude': self.latitude
+				'latitude': self.latitude,
+				'links': {
+					'like': url_for('api.like_a_restaurants', id = self.id),
+					'dislike': url_for('api.dislike_a_restaurants', id = self.id)
+				}
 			}
 		
 		def __repr__(self):
