@@ -2,14 +2,15 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+import os
 
 app = Flask(__name__)
 
-if os.environ.get('FLASK_ENV') = 'production':
+if os.environ.get('FLASK_ENV') == 'production':
 	app.config.from_object('app.config.ProdConfig')
 else:
 	app.config.from_object('app.config.DevelopmentConfig')
-	
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
