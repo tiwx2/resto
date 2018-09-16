@@ -12,8 +12,8 @@ The app satisfies the minimum requirements for the challenge and have been hoste
 
 ## To Do
 Still missing:
-⋅⋅* Email verification upon sign up.
-..* Admin panel (where one can add/edit restaurants)
-..* Restaurant page (You can only see a restaurant's card and not a full profile)
-..* Rating system
-..* Other thing (Open to suggestions...)
+  * Email verification upon sign up.
+  * Admin panel (where one can add/edit restaurants)
+  * Restaurant page (You can only see a restaurant's card and not a full profile)
+  * Rating system
+  * Other thing (Open to suggestions...)
